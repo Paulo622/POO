@@ -37,9 +37,9 @@ namespace _02_Construtores
 
         //Overload (Sobrecarga) de construtor
         //Declarar mais de um construtor com a lista de arguementos diferentes
-        public Quadrado()
+        public Quadrado():this(5)
         {
-           this.lado = 5; // Valor padrão
+           //this.lado = 5; 
         }
 
         //O construtor é um método especial que é chamado quando um objeto da classe é criado.
@@ -47,6 +47,7 @@ namespace _02_Construtores
         public Quadrado(int lado)
         {
             //this. acessa o membro da classe
+            if (lado > 0)
             this.lado = lado;
         }
 
