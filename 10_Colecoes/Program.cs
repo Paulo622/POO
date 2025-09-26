@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,8 +37,70 @@ namespace _10_Colecoes
                // Console.WriteLine($" - ID: {aluno.id} Nome: {aluno.Nome}");
                aluno.ImprimirAluno();
             }
-           
 
+            Dictionary<int,String> dicNomes = new Dictionary<int, string>();
+            dicNomes.Add(1, "Paulo");
+            dicNomes.Add(2, "Laura");
+            dicNomes.Add(3, "Felipe");
+
+            Console.WriteLine("Impressão dos dicNomes");
+            for (int i = 1; i <= dicNomes.Count; i++)
+            {
+                Console.WriteLine($" - {dicNomes[i]}");
+            }
+
+            Dictionary<int, Aluno> dicAlunos = new Dictionary<int, Aluno>();
+            dicAlunos.Add(paulo.id, paulo);
+            dicAlunos.Add(laura.id, laura);
+
+            Console.WriteLine("Impressão dos dicAlunos");
+           // for (int i = 1; i <= dicAlunos.Count; i++)
+          // {
+           //    dicAlunos[i].ImprimirAluno();
+           // }
+
+            foreach (Aluno aluno in dicAlunos.Values)
+            {
+                aluno.ImprimirAluno();
+            }
+
+            Queue<String> filaNomes = new Queue<String>();
+            filaNomes.Enqueue("Paulo");
+            filaNomes.Enqueue("Laura");
+            filaNomes.Enqueue("Felipe");
+
+            Console.WriteLine("Impressão dos filaNomes");
+            Console.WriteLine($" 1º) {filaNomes.Dequeue()}" );
+            foreach (string nome in filaNomes)
+            {
+                Console.WriteLine($" - {nome}" );
+            }
+
+            Stack<String> stackNomes = new Stack<String>();
+            stackNomes.Push("Paulo");
+            stackNomes.Push("Laura");
+            stackNomes.Push("Felipe");
+
+            Console.WriteLine("Impressão dos stackNomes");
+            Console.WriteLine($" 1º) {stackNomes.Pop()}");
+            foreach (string nome in stackNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+
+            HashSet<String> setNomes = new HashSet<String>();
+            setNomes.Add("Paulo");
+            setNomes.Add("Laura");
+            setNomes.Add("Felipe");
+            setNomes.Add("Paulo");
+            setNomes.Add("Laura");
+            setNomes.Add("Felipe");
+
+            Console.WriteLine("Impressão dos setNomes");
+            foreach (string nome in setNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
         }
     }
 
