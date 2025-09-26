@@ -73,6 +73,7 @@ namespace _10_Colecoes
             Console.WriteLine($" 1º) {filaNomes.Dequeue()}" );
             foreach (string nome in filaNomes)
             {
+                
                 Console.WriteLine($" - {nome}" );
             }
 
