@@ -10,32 +10,60 @@ namespace _12_ColecaoFila
     {
         static void Main(string[] args)
         {
-            Queue<String> filaAtendimento = new Queue<String>();
+            Queue<String> filaNomes = new Queue<String>();
 
             Console.WriteLine("=== Simulação de Fila de Atendimento ===");
+            
 
             for (int i = 1; i <= 5; i++)
             {
-                string nomeCliente = "Cliente " + i;
+                string nome;
                 do
-                {
+                { 
 
+                    Console.WriteLine($"Digite o nome da {i}ª pessoa: ");
+                    nome = Console.ReadLine();
 
-                    Console.WriteLine($"Digite o nome da 1ª pessoa: ");
-                    nomeCliente = Console.ReadLine();
+                    
 
-                    Console.WriteLine($"Digite o nome da 2ª pessoa: ");
-                    nomeCliente = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(nome) || nome.Length < 3)
+                    {
+                        Console.WriteLine("❌ O nome deve conter no mínimo 3 caracteres. Tente novamente.");
+                    }
 
+                } while (string.IsNullOrWhiteSpace(nome) || nome.Length < 3);
 
-                    Console.WriteLine($"Digite o nome da 3ª pessoa: ");
-                    nomeCliente = Console.ReadLine();
+                filaNomes.Enqueue(nome);
 
-
-
-                }
 
             }
+
+            Console.WriteLine("\n--- Atendimento ---");
+            for (int i = 1; i <= 3; i++)
+            {
+                if (filaNomes.Count > 0)
+                {
+                    string atendido = filaNomes.Dequeue();
+                    Console.WriteLine($"Atendendo {i}ª pessoa: {atendido}");
+                }
+               
+            }
+
+            Console.WriteLine("\n--- Ainda aguardando na fila ---");
+
+            
+            if(filaNomes.Count > 0)
+            {
+                foreach (var nome in filaNomes)
+                {
+                    Console.WriteLine(nome);
+                }
+            }
+            else
+            {
+                Console.WriteLine("A fila está vazia.");
+            }
+
         }
     }
 }
