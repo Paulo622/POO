@@ -12,6 +12,7 @@ namespace _17_Calendario
         private Mes mes;
         private DateTime primeiroDiaMes;
         private int[,] calendario;
+        private DiadaSemana diadaSemana; 
 
         public Calendario(int ano, Mes mes)
         {
@@ -79,7 +80,7 @@ namespace _17_Calendario
 
                         //if (diasFeriados.Contains(calendario[semana, diaSemana]) || diaSemana == 0)
                         //if (ehFeriado || diaSemana == 0)
-                        if (diasFeriados.Any( feriado => feriado != null && feriado.Dia == calendario[semana,diaSemana] )|| diaSemana == 0)
+                        if (diasFeriados.Any( feriado => feriado != null && feriado.Dia == calendario[semana,diaSemana] )|| (DiadaSemana)diaSemana == DiadaSemana.Domingo)
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t");
@@ -95,13 +96,9 @@ namespace _17_Calendario
             }
 
             Console.Write("\nFeriados: ");
-            /*for (int i = 0; i < diasFeriados.Length; i++)
-            {
-                if (diasFeriados[i] > 0)
-                {
-                    Console.Write($"{diasFeriados[i].ToString("D2")}\t");
-                }
-            }*/
+            diasFeriados.Sort();
+          
+
             foreach (Feriado diaFeriado in diasFeriados)
             {
                 if (diaFeriado != null)                
@@ -131,7 +128,7 @@ namespace _17_Calendario
             {
                 feriados.Add(new Feriado(2, "Finados"));
                 feriados.Add(new Feriado(15, "Proclamação da Republica"));
-                feriados.Add(new Feriado(20, "Conciência Negra"));
+                feriados.Add(new Feriado(20, "Consciência Negra"));
             }
             else if (mes == Mes.Dezembro)
             {
