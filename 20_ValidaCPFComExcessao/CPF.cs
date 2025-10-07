@@ -21,7 +21,7 @@ namespace _20_ValidaCPFComExcessao
 
             // 3- Validas CPFs com todos os números iguais
             if (this.Numero.Distinct().Count() == 1)
-               throw new CPFMesmoNumeroException();
+                throw new CPFMesmoNumeroException();
 
         }              
 

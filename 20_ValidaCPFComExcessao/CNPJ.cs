@@ -14,17 +14,18 @@ namespace _20_ValidaCPFComExcessao
         public CNPJ(string numero) 
         {
             this.Numero = Regex.Replace(numero, "[^0-9]", "");
+
+            // Verifica se o CNPJ tem 14 dígitos
+            if (this.Numero.Length != 14)
+                throw new CNPJQtdeDigitosException();
+
+            // Verifica se o CNPJ tem todos os números iguais
+            if (this.Numero.Distinct().Count() == 1)
+                throw new CNPJMesmoNumeroException();
         }
 
         public bool Validar()
         {
-            // Verifica se o CNPJ tem 14 dígitos
-            if (this.Numero.Length != 14)
-                return false;
-
-            // Verifica se o CNPJ tem todos os números iguais
-            if (this.Numero.Distinct().Count() == 1)
-                return false;
 
             // Calcula o 1º dígito verificador
             int digX = CalculaDV(this.Numero, 12, 5);

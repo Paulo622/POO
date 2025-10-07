@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNPJ.cs" />
+    <Compile Include="CNPJMesmoNumeroException.cs" />
+    <Compile Include="CNPJQtdeDigitosExceptio.cs" />
     <Compile Include="CPF.cs" />
     <Compile Include="CPFMesmoNumeroException.cs" />
     <Compile Include="CPFQtdeDigitosExceptio.cs" />
