@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("18_ValidaCPF")]
+[assembly: AssemblyTitle("20_ValidaCPFComExcessao")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("18_ValidaCPF")]
+[assembly: AssemblyProduct("20_ValidaCPFComExcessao")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("273faf08-c36e-495c-97d3-eeba2b4f86e1")]
+[assembly: Guid("d692e0dd-3b7b-4f3c-ae40-57b23ddaae0e")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace _18_ValidaCPF
+namespace _20_ValidaCPFComExcessao   
 {
     internal class CPF : IDocumento
     {
@@ -14,18 +14,20 @@ namespace _18_ValidaCPF
         public CPF( string numero ) {              
             // 1 - Eliminar caractres não numéricos
             this.Numero = Regex.Replace(numero, "[^0-9]", "");
+
+            // 2 - Validar se tem 11 digitos
+            if (this.Numero.Length != 11)
+                throw new CPFQtdeDigitosException();
+
+            // 3- Validas CPFs com todos os números iguais
+            if (this.Numero.Distinct().Count() == 1)
+               throw new CPFMesmoNumeroException();
+
         }              
 
         public bool Validar()
         {
-            // 2 - Validar se tem 11 digitos
-            if (this.Numero.Length != 11)
-                return false;           
-
-            // 3- Validas CPFs com todos os números iguais
-            if (this.Numero.Distinct().Count() == 1)
-                return false;            
-
+        
             //4 - Cálculo do 1º Digito verificador            
             int digX = CalculaDV(this.Numero, 9, 10);
 

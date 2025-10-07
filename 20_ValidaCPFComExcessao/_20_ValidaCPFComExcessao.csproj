@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3170B3E2-2385-410F-8F7D-BE1234D572D5}</ProjectGuid>
+    <ProjectGuid>{D692E0DD-3B7B-4F3C-AE40-57B23DDAAE0E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_18_ValidaCPF</RootNamespace>
-    <AssemblyName>18_ValidaCPF</AssemblyName>
+    <RootNamespace>_20_ValidaCPFComExcessao</RootNamespace>
+    <AssemblyName>20_ValidaCPFComExcessao</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNPJ.cs" />
     <Compile Include="CPF.cs" />
-    <Compile Include="Documento.cs" />
+    <Compile Include="CPFMesmoNumeroException.cs" />
+    <Compile Include="CPFQtdeDigitosExceptio.cs" />
+    <Compile Include="IDocumento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

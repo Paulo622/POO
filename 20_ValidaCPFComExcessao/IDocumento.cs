@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _18_ValidaCPF
+namespace _20_ValidaCPFComExcessao
 {
-    public interface IDocumento
+    internal interface IDocumento
     {
-       string Numero { get; }
-       bool Validar();
+        string Numero { get; }
+        bool Validar();
     }
 }

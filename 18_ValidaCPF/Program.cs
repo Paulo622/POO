@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace _18_ValidaCPF
@@ -11,15 +10,23 @@ namespace _18_ValidaCPF
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite seu CPF:");
-            string cpfDigitado = Console.ReadLine();
-
-            IDocumento documento = new CPF(cpfDigitado);
+            Console.Write("Digite o CPF: ");
+            //string cpf =  Console.ReadLine();
+            //CPF objCPF = new CPF( cpf );
+            IDocumento documento = new CPF(Console.ReadLine());
 
             if (documento.Validar())
-                Console.WriteLine("CPF válido!");
+                Console.WriteLine("Documento válido!");
             else
-                Console.WriteLine("CPF inválido!");
+                Console.WriteLine("Documento inválido!");
+
+            Console.Write("Digite o CNPJ: ");
+            documento = new CNPJ(Console.ReadLine());
+
+            if (documento.Validar())
+                Console.WriteLine("Documento válido!");
+            else
+                Console.WriteLine("Documento inválido!");
         }
     }
 }
