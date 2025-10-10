@@ -11,7 +11,7 @@ namespace _23_LeituraArquivoComExcecao
         static void Main(string[] args)
         {
             int leitura = 0;
-            string caminho = @"C:\Projetos\POO\arquivo.txt";
+            string caminho = @"C:\DesenvolvimentoSistema\SistemaAtendimento\arquivo.txt";
 
             while (true)
             {
@@ -39,19 +39,9 @@ namespace _23_LeituraArquivoComExcecao
                 {
                     Console.WriteLine("Arquivo não encontrado. Por favor, verifique o caminho e tente novamente.");
                     Console.WriteLine(caminho);
-                   
+
                 }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Entrada inválida. Por favor, digite um número válido.");
-                    Console.WriteLine(caminho);
-                    
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Ocorreu um erro: " + ex.Message);
-                    Console.WriteLine(caminho);
-            }   }
+            }     
         }
     }
 }

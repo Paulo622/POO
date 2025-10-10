@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_CriandoExcecaoPersonlizada", "24_CriandoExcecaoPersonlizada.csproj", "{6EC1E531-2EF9-4CC2-A376-885BC9476271}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EC1E531-2EF9-4CC2-A376-885BC9476271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC1E531-2EF9-4CC2-A376-885BC9476271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC1E531-2EF9-4CC2-A376-885BC9476271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC1E531-2EF9-4CC2-A376-885BC9476271}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C92F9E0E-0AE6-48D7-880B-14F8718281F7}
+	EndGlobalSection
+EndGlobal
